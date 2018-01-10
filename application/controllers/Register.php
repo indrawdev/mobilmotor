@@ -4,7 +4,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Register extends CI_Controller {
 
 	public function index() {
-		$this->load->view('vregister');
+		$data = '';
+		$this->template->content->view('vregister', $data);
+		$this->template->publish();
 	}
 
 	public function dealer() {

@@ -4,7 +4,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Jual extends CI_Controller {
 
 	public function index() {
-		$this->load->view('vjual');
+		$data = '';
+		$this->template->content->view('vjual', $data);
+		$this->template->publish();
 	}
 
 }

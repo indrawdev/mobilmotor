@@ -11,7 +11,9 @@ class Listing extends CI_Controller {
 	}
 	
 	public function index() {
-		$this->load->view('vlisting');
+		$data = '';
+		$this->template->content->view('vlisting', $data);
+		$this->template->publish();
 	}
 
 }

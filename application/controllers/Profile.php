@@ -11,7 +11,13 @@ class Profile extends CI_Controller {
 	}
 
 	public function index() {
-		$this->load->view('vprofile');
+		$data = '';
+		$this->template->content->view('vprofile', $data);
+		$this->template->publish();
+	}
+
+	public function logout() {
+		redirect('login');
 	}
 
 }

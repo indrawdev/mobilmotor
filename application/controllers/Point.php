@@ -11,7 +11,9 @@ class Point extends CI_Controller {
 	}
 	
 	public function index() {
-		$this->load->view('vpoint');
+		$data = '';
+		$this->template->content->view('vpoint', $data);
+		$this->template->publish();
 	}
 
 }
