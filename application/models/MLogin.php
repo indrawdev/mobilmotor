@@ -7,5 +7,17 @@ class MLogin extends CI_Model {
 		parent::__construct();
 		$this->load->database();
 	}
+
+	public function validUser($email, $pass) {
+		$sql = ("
+			SELECT fs_email, fs_password
+			FROM tm_user
+			WHERE fs_email = '".trim($email)."' 
+			AND fs_password = '".trim($pass)."'
+			AND fs_aktif = '1'
+		");
+
+		return $this->db->query($sql)->row();
+	}
 	
 }

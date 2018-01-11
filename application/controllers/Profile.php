@@ -11,12 +11,17 @@ class Profile extends CI_Controller {
 	}
 
 	public function index() {
-		$data = '';
+		$email = $this->encryption->decrypt($this->session->userdata('user'));
+
+		$this->load->model('MProfil');
+		$data['account'] = $this->MProfil->getAccount($email);
+		
 		$this->template->content->view('vprofile', $data);
 		$this->template->publish();
 	}
 
 	public function logout() {
+		$this->session->sess_destroy();
 		redirect('login');
 	}
 

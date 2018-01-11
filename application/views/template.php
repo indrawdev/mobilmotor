@@ -13,7 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.min.css'); ?>"/>
     <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap-theme.min.css'); ?>"/>
     <link rel="stylesheet" href="<?php echo base_url('assets/css/main.css'); ?>"/>
-    <script type="text/javascript" src="<?php echo base_url('assets/js/jquery-3.2.1.min.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/js/angular.min.js'); ?>"></script>
     <?php echo $this->template->javascript; ?>
 </head>
 <body>
@@ -30,6 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     echo $this->template->widget("footer", array('title' => 'Mobil Motor'));
 ?>
 
+<script type="text/javascript" src="<?php echo base_url('assets/js/jquery-3.2.1.min.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.min.js'); ?>"></script>
 </body>
 </html>

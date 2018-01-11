@@ -7,5 +7,15 @@ class MRegister extends CI_Model {
 		parent::__construct();
 		$this->load->database();
 	}
+
+	public function getUser($email) {
+		$sql = ("
+			SELECT fs_email FROM tm_user 
+			WHERE fs_email = '".trim($email)."' 
+			AND fs_aktif = '1'
+		");
+
+		return $this->db->query($sql)->row();
+	}
 	
 }
