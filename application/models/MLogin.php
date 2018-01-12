@@ -10,7 +10,7 @@ class MLogin extends CI_Model {
 
 	public function validUser($email, $pass) {
 		$sql = ("
-			SELECT fs_email, fs_password
+			SELECT fs_email, fs_password, fs_tipe
 			FROM tm_user
 			WHERE fs_email = '".trim($email)."' 
 			AND fs_password = '".trim($pass)."'
