@@ -37,4 +37,92 @@ class MCari extends CI_Model {
 		return $this->db->query($sql)->row();
 	}
 	
+
+	public function getMerk() {
+		$sql = ("
+
+		");
+
+		return $this->db->query($sql)->result();
+	}
+
+	public function getModel($merk) {
+		$sql = ("
+
+		");
+
+		return $this->db->query($sql)->result();
+	}
+
+	public function getTahun($model) {
+		$sql = ("
+
+		");
+
+		return $this->db->query($sql)->result();
+	}
+
+	public function getTransmisi($tahun) {
+		$sql = ("
+
+		");
+
+		return $this->db->query($sql)->result();
+	}
+
+	public function getKapasitas($transmisi) {
+		$sql = ("
+
+		");
+
+		return $this->db->query($sql)->result();
+	}
+
+	public function getVarian($kapasitas) {
+		$sql = ("
+
+		");
+
+		return $this->db->query($sql)->result();
+	}
+
+	public function getKelengkapan($varian) {
+		$sql = ("
+
+		");
+
+		return $this->db->query($sql)->result();
+	}
+
+	public function getJarakTempuh() {
+		$sql = ("
+
+		");
+
+		return $this->db->query($sql)->result();
+	}
+
+	public function getLokasi() {
+		$sql = ("
+
+		");
+
+		return $this->db->query($sql)->result();
+	}
+
+	public function getArea($lokasi) {
+		$sql = ("
+
+		");
+
+		return $this->db->query($sql)->result();
+	}
+
+	public function getKota($area) {
+		$sql = ("
+
+		");
+
+		return $this->db->query($sql)->result();
+	}
 }

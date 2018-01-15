@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     echo $this->template->widget("navigation", array('title' => 'Mobil Motor'));
 ?>
 
-<div class="container" style="margin-top: 80px;"><?php echo $this->template->content; ?></div>
+<div class="container" style="margin-top: 30px;"><?php echo $this->template->content; ?></div>
 
 <?php 
     // This is an example to show that you can load stuff from inside the template file

@@ -41,21 +41,25 @@
 			</ul>
 
 			<ul class="nav navbar-nav navbar-right">
+				<?php if ($this->session->userdata('login') <> TRUE) : ?>
 				<li><a href="<?php echo site_url('login'); ?>">Masuk</a></li>
 				<li><a href="<?php echo site_url('register'); ?>">Daftar</a></li>
+				<?php endif; ?>
 				<div class="navbar-form navbar-left">
 					<a href="<?php echo site_url('iklan'); ?>" class="btn btn-default">Pasang Iklan</a>
 				</div>
+				<?php if ($this->session->userdata('login') == TRUE) : ?>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Akun <span class="caret"></span></a>
 					<ul class="dropdown-menu">
 						<li><a href="<?php echo site_url('listing'); ?>">Iklan Saya</a></li>
 						<li><a href="<?php echo site_url('profile'); ?>">Profil</a></li>
-						<li><a href="<?php echo site_url('iklan'); ?>">Pasang Iklan <span class="label label-danger">GRATIS</span></a></li>
+						<li><a href="<?php echo site_url('post/mobil'); ?>">Pasang Iklan <span class="label label-danger">GRATIS</span></a></li>
 						<li role="separator" class="divider"></li>
 						<li><a href="<?php echo site_url('profile/logout'); ?>">Keluar</a></li>
 					</ul>
 				</li>
+				<?php endif; ?>
 			</ul>
 		</div>
 	</div>
